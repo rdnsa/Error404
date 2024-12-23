@@ -3,20 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lottie Animation</title>
+    <title>Website Lottie Issa</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <h1>Animasi Lottie</h1>
-    <div id="lottie-container" style="width: 300px; height: 300px; margin: auto;"></div>
+    <!-- Heading -->
+    <h1>Website Animasi Lottie</h1>
 
-    <!-- Tambahkan Lottie Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
-    <script src="script.js"></script>
-
+    <!-- Lottie Animation -->
+    <div id="lottie-container">
+        <!-- Particles.js -->
+        <div id="particles-js"></div>
+    
+        <!-- Lottie Animation -->
+        <lottie-player 
+            src="https://lottie.host/99c8597f-dd05-4627-bcd7-e385377cd7b0/8RDi943nUV.json" 
+            background="transparent" 
+            speed="1" 
+            style="width: 300px; height: 300px;" 
+            loop 
+            autoplay>
+        </lottie-player>
+    </div>
+    
+    <!-- Audio -->
     <audio id="background-music" controls autoplay loop>
         <source src="assets/lagu.mp3" type="audio/mpeg">
-     </audio>
-     
-     
+        Browser Anda tidak mendukung pemutar audio.
+    </audio>
+    
+    <!-- Button -->
+    <button onclick="alert('Halo saya Raden Mochamad Issa Wirakusumah. Selamat Datang!')">Klik Aku!</button>
+
+    <!-- Particles.js -->
+    <div id="particles-js"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Rizz | Dibuat dengan ❤️</p>
+    </footer>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
