@@ -1,8 +1,25 @@
-// Memuat animasi Lottie
-lottie.loadAnimation({
-    container: document.getElementById('lottie-container'), // Tempat animasi ditampilkan
-    renderer: 'svg', // Format render
-    loop: true,      // Animasi berulang
-    autoplay: true,  // Animasi dimulai otomatis
-    path: 'https://lottie.host/99c8597f-dd05-4627-bcd7-e385377cd7b0/8RDi943nUV.json' // URL animasi Lottie
+// Konfigurasi Particles.js
+particlesJS("particles-js", {
+    particles: {
+        number: { value: 100 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+        },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+        },
+    },
 });
