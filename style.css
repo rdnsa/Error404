@@ -1,23 +1,125 @@
+/* Font dan Reset */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Warna latar belakang */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
+main {
+    flex: 1; /* Memastikan konten utama mendorong footer ke bawah */
+    padding-bottom: 100px; /* Jarak untuk tombol */
+}
+
+/* Heading */
 h1 {
-    color: #333; /* Warna teks */
     text-align: center;
     margin-top: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-#lottie-container {
-    border: 2px solid #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Animasi Heading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Tombol */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Audio */
 audio {
     display: block;
     margin: 20px auto;
+}
+
+/* Partikel */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    position: relative;
+    z-index: 3;
+    margin-top: 20px; /* Tambahkan margin ke atas */
+}
+
+/* Tambahkan margin bawah ke tombol */
+button {
+    margin-bottom: 100px; /* Tambahkan jarak antara tombol dan footer */
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    button {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+/* Lottie Container */
+#lottie-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+    height: 350px; /* Tinggi container */
+    overflow: hidden; /* Potong elemen yang keluar */
+    border-radius: 15px; /* Opsional: Tambahkan border-radius */
+    padding: 20px;
+
+}
+
+/* Particles.js Background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Di bawah Lottie */
+}
+
+/* Lottie Player */
+lottie-player {
+    position: relative;
+    z-index: 2; /* Di atas Particles */
 }
